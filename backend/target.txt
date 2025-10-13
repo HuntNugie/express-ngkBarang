@@ -1,0 +1,2 @@
+membuat app backend endpoint api untuk front end pengelolaan barang
+1.fitur login
