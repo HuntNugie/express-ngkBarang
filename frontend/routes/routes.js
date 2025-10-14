@@ -5,9 +5,14 @@ const routes = [
     {path:"/dashboard",view:renderDashboard},
 ]
 const router = function(){
+    if(location.pathname === "/"){
+            history.replaceState({page:"login"},null,"/login");
+            return router();
+    }
     const cek = routes.find(route=>route.path === location.pathname)
     const view = cek ? cek.view : ()=>`<h1>404 page not found</h1>`
-    return view()
+    const app = document.getElementById("app")
+    app.innerHTML = view();
 }
 
 export default router

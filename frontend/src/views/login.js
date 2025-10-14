@@ -13,7 +13,7 @@ export default function login(){
           <label class="block text-sm font-medium text-zinc-300 mb-2">Password</label>
           <input type="password" class="w-full px-4 py-2 bg-zinc-900 border border-yellow-700/30 rounded-lg text-zinc-200 placeholder-zinc-500 focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition" placeholder="Masukkan password">
         </div>
-        <button type="submit" class="w-full py-2 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold rounded-lg shadow-lg hover:from-yellow-400 hover:to-yellow-500 transition-transform transform hover:scale-[1.02]">Login</button>
+        <button type="submit" class="login w-full py-2 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold rounded-lg shadow-lg hover:from-yellow-400 hover:to-yellow-500 transition-transform transform hover:scale-[1.02]">Login</button>
       </form>
       <div class="mt-6 text-center">
         <p class="text-sm text-zinc-400">

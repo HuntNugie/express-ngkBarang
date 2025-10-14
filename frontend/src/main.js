@@ -1,11 +1,14 @@
 import './style.css'
 import router from '../routes/routes.js';
-const app = document.querySelector("#app")
 
-window.onload = function(){
-     if(location.pathname === "/"){
-        history.replaceState({page:"login"},null,"/login");
+document.addEventListener("click",e=>{
+    e.preventDefault()
+    if(e.target.classList.contains("login")){
+        e.preventDefault();
+        history.pushState(null,null,"/dashboard")
+        router()
     }
-}
+})
 
- app.innerHTML = router();
+window.addEventListener("popstate",router);
+window.addEventListener("load",router)
