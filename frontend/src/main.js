@@ -1,13 +1,13 @@
 import './style.css'
 import router from '../routes/routes.js';
 import { register } from '../controllers/registerController.js';
-document.addEventListener("click",e=>{
+document.addEventListener("click",async(e)=>{
     if(e.target.classList.contains("login")){
         e.preventDefault();
         history.pushState(null,null,"/dashboard")
         router()
     }else if(e.target.classList.contains("register")){
-        register();
+        const res = await register();
     }
 })
 
