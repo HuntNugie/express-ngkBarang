@@ -9,7 +9,10 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:5173",
+    credentials:true
+}));
 // untuk menghandle req.body dari http request jika ada kiriman
 app.use(express.json());
 
