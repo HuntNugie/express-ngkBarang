@@ -25,7 +25,8 @@ export const loginUser = async(req,res)=>{
         return res.status(401).json({message:"Username atau password salah"})
     }
     const token = generateToken({username,password})
-    res.cookie("token",token,{
+    
+    const cook = res.cookie("token",token,{
         httpOnly:true,
         secure:true,
         sameSite:'none'

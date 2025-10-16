@@ -1,8 +1,10 @@
-import { verifyToken } from "../utils/jwt"
+import { verifyToken } from "../utils/jwt.js"
 export const auth = (req,res,next)=>{
     // ambil cookie token dari request
-    const token = req.cookie?.token
+    const token = req.cookies?.token
+
     // jika tidak ada token nya
+
     if(!token){
         return res.status(401).json({message:"akses di tolak"})
     }

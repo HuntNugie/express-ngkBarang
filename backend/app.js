@@ -20,7 +20,7 @@ app.use(cookieParser())
 // untuk route nya
 app.use("/",route.home)
 app.use("/api/auth",route.auth)
-
+app.use("/api/dashboard",route.dashboard)
 // error handling
 app.use((req,res)=>{
     res.status(404).json({page:"page not found"})
