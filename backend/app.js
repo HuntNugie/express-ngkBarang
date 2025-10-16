@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 import route from "./Routes/arg.js"
 import "./utils/file.js"
 import cors from "cors"
-
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ app.use(cors({
 }));
 // untuk menghandle req.body dari http request jika ada kiriman
 app.use(express.json());
-
+app.use(cookieParser())
 
 // untuk route nya
 app.use("/",route.home)

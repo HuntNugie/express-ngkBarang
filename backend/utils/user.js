@@ -1,4 +1,4 @@
-import fs, { readSync } from "fs"
+import fs from "fs"
 import dotenv from "dotenv"
 
 dotenv.config();
@@ -14,4 +14,10 @@ export const addUser = (add)=>{
     const data = loadUser();
     const result = data.push(add)
     saveUser(JSON.stringify(data))
+}
+
+export const findUser = (username)=>{
+    const data = loadUser();
+    const result = data.find(user=>user.username === username);
+    return result;
 }
