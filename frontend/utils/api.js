@@ -13,6 +13,6 @@ export const getData = async url=>{
         const res = await axios.get(url,{withCredentials:true})
         return res
     }catch(error){
-        console.log(error)
+        throw new Error(error)
     }
 }
