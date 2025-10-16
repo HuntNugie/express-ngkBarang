@@ -55,7 +55,7 @@ export default function register(){
 
     <p class="mt-6 text-sm text-zinc-400">
       Sudah punya akun?
-      <a href="/login" class="text-yellow-400 hover:text-yellow-300 font-medium">Login di sini</a>
+      <a href="/login" class="link-login text-yellow-400 hover:text-yellow-300 font-medium">Login di sini</a>
     </p>
 
     <p class="text-xs text-zinc-600 mt-6">© 2025 <span class="text-yellow-400 font-semibold">ngkBarang</span>. All rights reserved.</p>
