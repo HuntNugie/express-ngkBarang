@@ -7,3 +7,12 @@ export const postData = async(url,data)=>{
         console.log(error)
     }
 }
+
+export const getData = async url=>{
+    try{
+        const res = await axios.get(url,{withCredentials:true})
+        return res
+    }catch(error){
+        console.log(error)
+    }
+}

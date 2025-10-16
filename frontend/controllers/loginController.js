@@ -1,5 +1,5 @@
 import { postData } from "../utils/api.js";
-import router from "../routes/routes.js";
+import {tampil} from "../routes/routes.js";
 
 const api = "http://localhost:3000"
 
@@ -11,8 +11,7 @@ export const login = ()=>{
         try {
         const result = await postData(`${api}/api/auth/login`,data)
         if(result.status === 200){
-            history.replaceState({page:"dashboard"},null,"/dashboard")
-            router()
+            tampil("/dashboard")
         }
         } catch (error) {
             console.log(error.message)
