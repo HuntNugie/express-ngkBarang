@@ -15,7 +15,7 @@ export const auth = (req,res,next)=>{
         next();
     } catch (error) {
         if(error.name == "TokenExpiredError"){
-            return res.status(401).json({message:"ses telah berakhir"})
+            return res.status(401).json({message:"sesi telah berakhir"})
         }else{
             return res.status(403).json({message:"token tidak valid"})
         }

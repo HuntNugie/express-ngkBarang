@@ -29,7 +29,8 @@ export const loginUser = async(req,res)=>{
     const cook = res.cookie("token",token,{
         httpOnly:true,
         secure:true,
-        sameSite:'none'
+        sameSite:'none',
+        maxAge:60*1000
     })
         res.status(200).json({message:"Berhasil login"})
     } catch (error) {
